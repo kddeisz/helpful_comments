@@ -1,3 +1,82 @@
-= HelpfulComments
+# HelpfulComments
 
-Use this for putting helpful comments into your models and controllers.
+This gem adds functionality for putting comments into your models and controllers.
+
+## Installation
+
+Add this line to your application's Gemfile:
+
+    gem 'helpful_comments'
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install helpful_comments
+
+## Usage
+
+### Controllers
+
+    class UsersController < ApplicationController
+      
+      def index
+      end
+      
+      def show
+      end
+      
+      def new
+      end
+    end
+
+Becomes...
+
+    class UsersController < ApplicationController
+      
+      # GET /users(.:format)
+      def index
+      end
+      
+      # GET /users/new(.:format)
+      def new
+      end
+      
+      # POST /users(.:format)
+      def create
+      end
+      
+      ...
+    end
+
+### Models
+
+    class User < ActiveRecord::Base
+      
+      ...
+    end
+
+Becomes...
+
+    # +---------------------------+----------------+------+---------+
+    # | Field                     | Type           | Null | Default |
+    # +---------------------------+----------------+------+---------+
+    # | id                        | int(11)        | NO   |         |
+    # | name                      | varchar(255)   | NO   |         |
+    # | email                     | varchar(255)   | YES  |         |
+    # | administrator             | tinyint(1)     | NO   | 0       |
+    # +---------------------------+----------------+------+---------+
+    class User < ActiveRecord::Base
+      
+      ...
+    end
+
+## Contributing
+
+1. Fork it ( https://github.com/kddeisz/helpful_comments/fork )
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
