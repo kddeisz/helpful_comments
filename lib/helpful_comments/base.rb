@@ -2,7 +2,7 @@ module HelpfulComments
   class Base
     
     # convenience helper for multiple classes
-    def self.load_for(*klasses)
+    def self.load(*klasses)
       klasses.each { |klass| self.new(klass).load }
     end
     

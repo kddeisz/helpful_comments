@@ -21,7 +21,7 @@ module HelpfulComments
     # puts the comments into the file
     def load
       @comments = self.build
-      max_size = @comments.values.max_by(&:size).size
+      max_size = @comments.values.max_by(&:size).try(:size)
       
       load_comments(Rails.root.join('app', 'controllers').to_s, max_size) do |file, line|
         if get_finder === line
