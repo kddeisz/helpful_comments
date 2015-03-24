@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = HelpfulComments::VERSION
   s.authors     = ['Kevin Deisz']
   s.email       = ['kevin.deisz@gmail.com']
-  s.homepage    = 'TODO'
+  s.homepage    = 'https://github.com/kddeisz/helpful_comments'
   s.summary     = 'Puts helpful comments into your models and controllers.'
   s.description = 'Yay helpful comments.'
   s.license     = 'MIT'
